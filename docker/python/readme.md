@@ -4,10 +4,10 @@
 docker build -t image-size-detector:0.0.1 .
 ```
 
-### Place an image into a local folder
+### Place a JPEG image into a local folder
 
-In this example we will use local directory:
-`C:\Users\DmitriSafine\tmp\images`
+In this example we will use an image of a cat in a local directory:
+`C:\Users\DmitriSafine\tmp\images\funny-cat.jpg`
 
 ### Run application in the docker container
 

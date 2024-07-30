@@ -1,5 +1,6 @@
 import argparse
 import os
+from PIL import Image
 
 
 def __create_parser():
@@ -11,6 +12,13 @@ def __create_parser():
     return parser
 
 
+def __get_image_size(image_file):
+    image_path = f"/images/{image_file}"
+    image = Image.open(image_path)
+    width, height = image.size
+    print(f"{width}x{height}")
+
+
 def main():
     """
     detects size of an image
@@ -19,7 +27,7 @@ def main():
     args = parser.parse_args()
 
     if args.image:
-        print(f"detecting size of an image {args.image}")
+        __get_image_size(args.image)
     else:
         parser.print_help()
 

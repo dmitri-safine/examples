@@ -1,0 +1,9 @@
+services:
+  image_size_detector:
+    image: image-size-detector:0.0.1
+    restart: no
+    user: appuser
+    volumes:
+      - images:/opt/get-image-size/images
+volumes:
+  images:
